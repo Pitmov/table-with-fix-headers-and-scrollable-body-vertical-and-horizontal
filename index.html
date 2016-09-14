@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        *
+{
+    padding: 0;
+    margin: 0;
+    /*-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;*/
+}
+
+body
+{
+    height: 100%;
+    width: 100%;
+}
+table
+{
+    border-collapse: collapse; /* make simple 1px lines borders if border defined */
+    width: 100%;
+}
+.outer-container
+{
+    background-color: #ccc;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 300px;
+    bottom: 40px;
+    width: 100%;
+}
+
+.inner-container
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+.table-header
+{
+    height: 40px;
+    position: relative;
+}
+.table-body
+{
+    height: calc(100% - 40px);
+    overflow: auto;
+}
+
+.header-cell
+{
+    background-color: yellow;
+    text-align: left;
+    height: 40px;
+    padding: 0 32px 0 24px;
+}
+.body-cell 
+{
+    background-color: blue;
+    text-align: left;
+    padding: 0 32px 0 24px;
+}
+.col1, .col3, .col4, .col5
+{
+    min-width: 120px;
+}
+.col2
+{
+    min-width: 50px;
+}
+
+.col6, .col7, .col8, .col9, .col10, .col11, .col12 {
+        min-width: 50px;
+    }
+    </style>
+</head>
+<body>
+<div class="outer-container">
+        <div class="inner-container">
+            <div class="table-header">
+                <table id="headertable">
+                    <thead>
+                        <tr>
+                            <th class="header-cell col1">One</th>
+                            <th class="header-cell col2">Two</th>
+                            <th class="header-cell col3">Three</th>
+                            <th class="header-cell col4">Four</th>
+                            <th class="header-cell col5">Five</th>
+                            <th class="header-cell col6">Six</th>
+                            <th class="header-cell col7">Seven</th>
+                            <th class="header-cell col8">Eight</th>
+                            <th class="header-cell col9">Nine</th>
+                            <th class="header-cell col10">Ten</th>
+                            <th class="header-cell col11">Eleven</th>
+                            <th class="header-cell col12">Twelve</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-body">
+                <table id="bodytable">
+                    <tbody>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                        <tr>
+                            <td class="body-cell col1">body row1</td>
+                            <td class="body-cell col2">body row2</td>
+                            <td class="body-cell col3">body row2</td>
+                            <td class="body-cell col4">body row2</td>
+                             <td class="body-cell col5">body row2 en nog meer</td>
+                            <td class="body-cell col6">body row2 en nog meer</td>
+                            <td class="body-cell col7">body row2 en nog meer</td>
+                            <td class="body-cell col8">body row2 en nog meer</td>
+                            <td class="body-cell col9">body row2 en nog meer</td>
+                            <td class="body-cell col10">body row2 en nog meer</td>
+                            <td class="body-cell col11">body row2 en nog meer</td><td class="body-cell col12">body row2 en nog meer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+          document.querySelector(".table-body").onscroll = function (event)
+    {
+        var scrollLeft = this.scrollLeft;
+        document.querySelector(".table-header").style.left =  -1*scrollLeft + 'px';
+    }
+
+    function setHeaderWidth() {
+        var colWidth;
+        colWidth = Array.from(document.querySelector('.table-body > #bodytable > tbody').firstElementChild.children).map(function(el) {
+            return el.offsetWidth;
+        });
+        Array.from(document.querySelector('.table-header > #headertable > thead').firstElementChild.children).forEach(function(el, index) {
+            el.style.width = colWidth[index]+'px';
+        });
+    }
+
+    setHeaderWidth();
+
+    window.resize = setHeaderWidth();
+    </script>
+</body>
+</html>
