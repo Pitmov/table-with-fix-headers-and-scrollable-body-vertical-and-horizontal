@@ -2,3 +2,4 @@
 This repo contains example of table with fix headers and scrollable tbody - vertical and horizontal.
 
 In my opinion this is the simplest solution that works even in old internet explorer.
+Example is here https://pitmov.github.io/table-with-fix-headers-and-scrollable-body-vertical-and-horizontal/
