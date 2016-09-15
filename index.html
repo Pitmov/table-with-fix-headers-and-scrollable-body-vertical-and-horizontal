@@ -434,35 +434,6 @@ table
         </div>
     </div>
     <script type="text/javascript">
-     var getNumberStyle = function(element, style, styles) {
-  if (HAS_COMPUTED_STYLE) {
-    styles = styles || getStyles(element, null);
-    var value = getFloat(styles[style]);
-
-    // Support IE<=11 and W3C spec.
-    if (!COMPUTED_SIZE_INCLUDES_PADDING && style === 'width') {
-      value += getFloat(styles.paddingLeft) +
-        getFloat(styles.paddingRight) +
-        getFloat(styles.borderLeftWidth) +
-        getFloat(styles.borderRightWidth);
-    } else if (!COMPUTED_SIZE_INCLUDES_PADDING && style === 'height') {
-      value += getFloat(styles.paddingTop) +
-        getFloat(styles.paddingBottom) +
-        getFloat(styles.borderTopWidth) +
-        getFloat(styles.borderBottomWidth);
-    }
-
-    return value;
-  } else {
-    return getFloat($(element).css(style));
-  }
-};
-
-var getFloat = function(value) {
-  value = parseFloat(value);
-  return $.isNumeric(value) ? value : 0
-};
-
           document.querySelector(".table-body").onscroll = function (event)
     {
         var scrollLeft = this.scrollLeft;
@@ -471,10 +442,10 @@ var getFloat = function(value) {
 
     function setHeaderWidth() {
         var colWidth;
-        colWidth = Array.from(document.querySelector('.table-body > #bodytable > tbody').firstElementChild.children).map(function(el) {
-            return getNumberStyle(el, 'width');
+        colWidth = Array.prototype.map.call(document.querySelector('.table-body > #bodytable > tbody').firstElementChild.children, function(el) {
+            return window.getComputedStyle(el, null).width;
         });
-        Array.from(document.querySelector('.table-header > #headertable > thead').firstElementChild.children).forEach(function(el, index) {
+        Array.prototype.forEach.call(document.querySelector('.table-header > #headertable > thead').firstElementChild.children, function(el, index) {
             el.style.width = colWidth[index]+'px';
         });
     }
